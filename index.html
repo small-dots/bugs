@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .base_empty {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .base_empty_box {
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 188px;
+        height: 141px;
+        background-repeat: no-repeat;
+        animation: translate_empty1 0.68s steps(17), translate_empty2 2.32s 0.68s steps(56) infinite;
+        background: url('./img_kong.png') no-repeat;
+        background-size: cover;
+      }
+      .animation_infinite {
+        animation-iteration-count: 1, 1 !important;
+        animation-fill-mode: forwards;
+      }
+
+      .descripts {
+        color: #8896b3;
+      }
+      @keyframes translate_empty1 {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -3196px 0;
+        }
+      }
+      @keyframes translate_empty2 {
+        from {
+          background-position: -3384px 0;
+        }
+        to {
+          background-position: -13912px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base_empty">
+      <div class="base_empty_box" class="animation_infinite"></div>
+      <div class="descripts">文本</div>
+    </div>
+  </body>
+</html>
